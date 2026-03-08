@@ -10,6 +10,6 @@ def get_response(user_input):
     vec = vectorizer.transform([user_input])
     intent = model.predict(vec)[0]
 
-    for i in data["intents"]:
+    for intent in intents["intents"]:
         if i["tag"] == intent:
             return random.choice(i["responses"])
