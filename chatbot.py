@@ -1,12 +1,9 @@
 
 import random
 import pickle
-import json
+
 model = pickle.load(open("model.pkl","rb"))
 vectorizer = pickle.load(open("vectorizer.pkl","rb"))
-
-with open("intents.json") as file:
-    data = json.load(file)
 
 def get_response(user_input):
 
