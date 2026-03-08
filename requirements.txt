@@ -4,6 +4,4 @@ streamlit
 nltk
 numpy
 pandas
-pickle
-random
-json
+
