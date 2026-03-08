@@ -1,0 +1,9 @@
+
+scikit-learn
+streamlit
+nltk
+numpy
+pandas
+pickle
+random
+json
