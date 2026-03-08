@@ -11,14 +11,30 @@ nltk.download('wordnet')
 
 lemmatizer = WordNetLemmatizer()
 
-# Load dataset
-with open("intents.json") as file:
-    data = json.load(file)
-
 texts = []
 labels = []
 
-for intent in data["intents"]:
+intents = {
+ "intents":[
+   {
+     "tag":"greeting",
+     "patterns":["Hi","Hello","Hey"],
+     "responses":["Hello!","Hi there!"]
+   },
+   {
+     "tag":"goodbye",
+     "patterns":["Bye","See you"],
+     "responses":["Goodbye!","See you later"]
+   },
+   {
+     "tag":"thanks",
+     "patterns":["Thanks","Thank you"],
+     "responses":["You're welcome"]
+   }
+ ]
+}
+
+for intent in intents["intents"]:
     for pattern in intent["patterns"]:
         texts.append(pattern)
         labels.append(intent["tag"])
