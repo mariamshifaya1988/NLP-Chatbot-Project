@@ -13,7 +13,7 @@ nltk.download('wordnet')
 lemmatizer = WordNetLemmatizer()
 
 # Load dataset
-with open("/content/drive/MyDrive/NLP_Chatbot_Project/intents.json") as file:
+with open("intents.json") as file:
     data = json.load(file)
 
 texts = []
@@ -34,8 +34,8 @@ model = LogisticRegression()
 model.fit(X, labels)
 
 # Save model
-pickle.dump(model, open("/content/drive/MyDrive/NLP_Chatbot_Project/model.pkl", "wb"))
-pickle.dump(vectorizer, open("/content/drive/MyDrive/NLP_Chatbot_Project/vectorizer.pkl", "wb"))
+pickle.dump(model, open("model.pkl", "wb"))
+pickle.dump(vectorizer, open("vectorizer.pkl", "wb"))
 
 print("Model trained successfully!")
 
