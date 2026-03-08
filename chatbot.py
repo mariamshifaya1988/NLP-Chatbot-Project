@@ -1,6 +1,4 @@
 
-import json
-import pickle
 import random
 
 model = pickle.load(open("model.pkl","rb"))
