@@ -27,8 +27,10 @@ intents = {
 def get_response(user_input):
 
     vec = vectorizer.transform([user_input])
-    intent = model.predict(vec)[0]
+    predicted_tag = model.predict(vec)[0]
 
     for intent in intents["intents"]:
-        if intent["tag"] == intent:
+        if intent["tag"] == predicted_tag:
             return random.choice(intent["responses"])
+         
+    return "Sorry, I didn't understand that."    
