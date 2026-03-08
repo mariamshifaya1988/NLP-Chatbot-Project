@@ -4,5 +4,5 @@ streamlit
 nltk
 numpy
 pandas
-json
+
 
