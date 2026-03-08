@@ -1,0 +1,198 @@
+# create JSON file
+
+import json
+
+{
+  "intents": [
+
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening", "Is anyone there"],
+      "responses": ["Hello! How can I help you today?", "Hi there!", "Greetings!"]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Catch you later"],
+      "responses": ["Goodbye!", "See you later!", "Have a great day!"]
+    },
+
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "I appreciate it"],
+      "responses": ["You're welcome!", "Happy to help!", "Anytime!"]
+    },
+
+    {
+      "tag": "name",
+      "patterns": ["What is your name", "Who are you", "Tell me your name"],
+      "responses": ["I am an AI chatbot.", "You can call me NLP Assistant."]
+    },
+
+    {
+      "tag": "about_bot",
+      "patterns": ["What can you do", "Tell me about yourself", "What is this chatbot"],
+      "responses": ["I am an NLP chatbot designed to answer basic questions.", "I help users with simple queries."]
+    },
+
+    {
+      "tag": "creator",
+      "patterns": ["Who created you", "Who built you", "Who is your developer"],
+      "responses": ["I was created by a data science developer using Python."]
+    },
+
+    {
+      "tag": "age",
+      "patterns": ["How old are you", "What is your age"],
+      "responses": ["I don't have an age. I was recently created!"]
+    },
+
+    {
+      "tag": "location",
+      "patterns": ["Where are you located", "Where do you live"],
+      "responses": ["I exist in the cloud."]
+    },
+
+    {
+      "tag": "help",
+      "patterns": ["Can you help me", "I need help", "Help me"],
+      "responses": ["Sure! Tell me how I can help you."]
+    },
+
+    {
+      "tag": "weather",
+      "patterns": ["What is the weather", "How is the weather today"],
+      "responses": ["I can't check real-time weather yet, but it's always sunny in the cloud!"]
+    },
+
+    {
+      "tag": "time",
+      "patterns": ["What time is it", "Tell me the time"],
+      "responses": ["I don't have access to a clock yet."]
+    },
+
+    {
+      "tag": "date",
+      "patterns": ["What is today's date", "Tell me the date"],
+      "responses": ["I currently cannot access the calendar."]
+    },
+
+    {
+      "tag": "joke",
+      "patterns": ["Tell me a joke", "Make me laugh"],
+      "responses": ["Why do programmers prefer dark mode? Because light attracts bugs!"]
+    },
+
+    {
+      "tag": "food",
+      "patterns": ["What is your favorite food", "Do you like food"],
+      "responses": ["I run on data, not food!"]
+    },
+
+    {
+      "tag": "hobby",
+      "patterns": ["What are your hobbies", "What do you like doing"],
+      "responses": ["I enjoy processing natural language."]
+    },
+
+    {
+      "tag": "music",
+      "patterns": ["Do you like music", "What music do you like"],
+      "responses": ["I enjoy all digital sounds."]
+    },
+
+    {
+      "tag": "movies",
+      "patterns": ["Do you watch movies", "Favorite movie"],
+      "responses": ["I haven't watched movies yet."]
+    },
+
+    {
+      "tag": "sports",
+      "patterns": ["Do you like sports", "Favorite sport"],
+      "responses": ["I like data science competitions!"]
+    },
+
+    {
+      "tag": "technology",
+      "patterns": ["What is AI", "Explain artificial intelligence"],
+      "responses": ["AI is the simulation of human intelligence by machines."]
+    },
+
+    {
+      "tag": "machine_learning",
+      "patterns": ["What is machine learning", "Explain ML"],
+      "responses": ["Machine learning allows computers to learn from data."]
+    },
+
+    {
+      "tag": "deep_learning",
+      "patterns": ["What is deep learning", "Explain deep learning"],
+      "responses": ["Deep learning uses neural networks with many layers."]
+    },
+
+    {
+      "tag": "nlp",
+      "patterns": ["What is NLP", "Explain natural language processing"],
+      "responses": ["NLP enables machines to understand human language."]
+    },
+
+    {
+      "tag": "python",
+      "patterns": ["What is Python", "Explain Python programming"],
+      "responses": ["Python is a popular programming language used in data science."]
+    },
+
+    {
+      "tag": "data_science",
+      "patterns": ["What is data science", "Explain data science"],
+      "responses": ["Data science extracts insights from data."]
+    },
+
+    {
+      "tag": "streamlit",
+      "patterns": ["What is Streamlit", "Explain Streamlit"],
+      "responses": ["Streamlit is a Python framework for building data apps."]
+    },
+
+    {
+      "tag": "github",
+      "patterns": ["What is GitHub", "Explain GitHub"],
+      "responses": ["GitHub is a platform for hosting and sharing code."]
+    },
+
+    {
+      "tag": "database",
+      "patterns": ["What is a database", "Explain database"],
+      "responses": ["A database stores and manages structured data."]
+    },
+
+    {
+      "tag": "sql",
+      "patterns": ["What is SQL", "Explain SQL"],
+      "responses": ["SQL is used to query databases."]
+    },
+
+    {
+      "tag": "powerbi",
+      "patterns": ["What is Power BI", "Explain Power BI"],
+      "responses": ["Power BI is a data visualization tool."]
+    },
+
+    {
+      "tag": "ai_future",
+      "patterns": ["What is the future of AI", "Will AI take over jobs"],
+      "responses": ["AI will transform industries but also create new opportunities."]
+    },
+
+    {
+      "tag": "portfolio",
+      "patterns": ["What projects should I build", "Data science projects"],
+      "responses": ["You can build ML models, dashboards, and NLP chatbots."]
+    }
+
+  ]
+}
+
+with open("/content/drive/MyDrive/NLP_Chatbot_Project/intents.json","w") as f:
+    json.dump(intents,f,indent=4)
