@@ -30,5 +30,5 @@ def get_response(user_input):
     intent = model.predict(vec)[0]
 
     for intent in intents["intents"]:
-        if i["tag"] == intent:
-            return random.choice(i["responses"])
+        if intent["tag"] == intent:
+            return random.choice(intent["responses"])
