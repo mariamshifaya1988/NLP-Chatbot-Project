@@ -13,9 +13,6 @@ nltk.download('punkt_tab')
 nltk.download('wordnet')
 
 lemmatizer = WordNetLemmatizer()
-model = pickle.load(open("model.pkl","rb"))
-vectorizer = pickle.load(open("vectorizer.pkl","rb"))
-
 # intents dataset
 intents = {
  "intents":[
