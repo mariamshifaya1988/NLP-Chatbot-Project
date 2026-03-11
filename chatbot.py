@@ -2,8 +2,8 @@
 import pickle
 import random
 
-model = pickle.load(open("/content/drive/MyDrive/NLP_Chatbot_Project/model.pkl","rb"))
-vectorizer = pickle.load(open("/content/drive/MyDrive/NLP_Chatbot_Project/vectorizer.pkl","rb"))
+model = pickle.load(open("model.pkl","rb"))
+vectorizer = pickle.load(open("vectorizer.pkl","rb"))
 
 intents = {
  "intents":[
