@@ -19,8 +19,8 @@ intents = {
    },
    {
      "tag":"thanks",
-     "patterns":["Thanks","Thank you"],
-     "responses":["You're welcome","Thank you !!!!"]
+     "patterns":["Thanks","Thank you","Thanks a lot","Thank you very much","I appreciate it","Much appreciated","Thanks for the help","Thanks buddy","Thanks bot","Thank you so much"],
+     "responses":["You're welcome","Happy to help","Anytime!"]
    }
  ]
 }
