@@ -41,15 +41,20 @@ def get_response(user_input):
     vec = vectorizer.transform([processed])
 
     predicted_tag = model.predict(vec)[0]
- # check confidence
-confidence = max(model.predict_proba(vec)[0])
 
-print("Predicted:", predicted_tag, "Confidence:", confidence)
-# reject low confidence predictions
-if confidence < 0.5:
-    return "Sorry, I didn't understand."
-for intent in intents["intents"]:
+    # check confidence
+    confidence = max(model.predict_proba(vec)[0])
+
+    print("Predicted:", predicted_tag, "Confidence:", confidence)
+
+    # reject low confidence predictions
+    if confidence < 0.5:
+        return "Sorry, I didn't understand."
+
+    for intent in intents["intents"]:
         if intent["tag"] == predicted_tag:
             return random.choice(intent["responses"])
+
+    return "Sorry, I didn't understand."
 
     return "Sorry, I didn't understand."   
