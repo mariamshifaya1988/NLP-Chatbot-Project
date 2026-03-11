@@ -32,9 +32,7 @@ intents = {
 }
 
 def preprocess(text):
-    words = nltk.word_tokenize(text.lower())
-    words = [lemmatizer.lemmatize(w) for w in words]
-    return " ".join(words)
+    return text.lower().strip()
 
 def get_response(user_input):
 
@@ -43,8 +41,14 @@ def get_response(user_input):
     vec = vectorizer.transform([processed])
 
     predicted_tag = model.predict(vec)[0]
+ # check confidence
+confidence = max(model.predict_proba(vec)[0])
 
-    for intent in intents["intents"]:
+print("Predicted:", predicted_tag, "Confidence:", confidence)
+# reject low confidence predictions
+if confidence < 0.5:
+    return "Sorry, I didn't understand."
+for intent in intents["intents"]:
         if intent["tag"] == predicted_tag:
             return random.choice(intent["responses"])
 
