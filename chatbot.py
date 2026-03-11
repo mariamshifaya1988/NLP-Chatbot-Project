@@ -32,3 +32,4 @@ def get_response(user_input):
     for intent_data in intents["intents"]:
         if intent_data["tag"] == predicted_intent:
             return random.choice(intent_data["responses"])
+    return "Sorry, I didn't understand."     
