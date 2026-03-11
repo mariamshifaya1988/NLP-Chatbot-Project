@@ -20,7 +20,7 @@ intents = {
    {
      "tag":"thanks",
      "patterns":["Thanks","Thank you"],
-     "responses":["You're welcome"]
+     "responses":["You're welcome","Thank you !!!!"]
    }
  ]
 }
